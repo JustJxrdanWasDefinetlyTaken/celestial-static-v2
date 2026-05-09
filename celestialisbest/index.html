@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-  <base href="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y12SRXG3F"></script>
-  <script src="celestialisbest/mossad/index.js"></script>
+  <script src="/celestialisbest/mossad/index.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -18,15 +17,15 @@
     gtag("config", "G-1Y12SRXG3F");
   </script>
   <title>Drew's Learning Academy | Edison, NJ</title>
-  <link id="favicon" rel="shortcut icon" type="image/png" href="celestialisbest/assets/img/logo-blackbg.png" />
+  <link id="favicon" rel="shortcut icon" type="image/png" href="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/img/logo-blackbg.png" />
   <meta name="Drew's Learning Academy" />
   <meta content="Drew's Learning Academy | Edison, NJ" property="og:title" />
   <meta
     content="DLA, short for Drew's Learning Academy, is a new upcoming academy in edison, new jersey. DLA focuses on student success for K-12. We believe that the best academic dicipline is learning. Join now to set your child up for success." />
-  <link rel="shortcut icon" type="image/png" href="celestialisbest/assets/img/logo-blackbg.png" />
-  <script src="celestialisbest/assets/js/prox.js" type="module"></script>
+  <link rel="shortcut icon" type="image/png" href="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/img/logo-blackbg.png" />
+  <script src="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/js/prox.js" type="module"></script>
   <script async defer type="module">
-    import { newTab, switchTab, closeTab } from "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/lithium.mjs";
+    import { newTab, switchTab, closeTab } from "./lithium.mjs";
 
     window.newTab = newTab;
     let tabs = [];
@@ -35,7 +34,7 @@
     const getIcon = (url) =>
       /^https?:\/\/[\w.-]+\.[a-z]{2,}/i.test(url)
         ? `https://s2.googleusercontent.com/s2/favicons?sz=64&domain_url=${url}`
-        : "celestialisbest/assets/img/logo-blackbg.png";
+        : "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/img/logo-blackbg.png";
 
     function createTab(id, title = "new tab", url = "") {
       const tab = document.createElement("div");
@@ -125,7 +124,7 @@
 
     checkState();
   </script>
-  <link href="celestialisbest/assets/css/tabs.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/css/tabs.css" rel="stylesheet" />
   <script type="module" async defer>
     import {
       makeURL,
@@ -135,19 +134,19 @@
       setProxy,
       currentTab,
       Tab,
-    } from "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/lithium.mjs";
+    } from "./lithium.mjs";
 
     // --- INIT ---
     const form = document.getElementById("form");
     let search =
       localStorage.getItem("search-engine") ||
-      "https://search.brave.com/search?q=%s";
+      "https://duckduckgo.com/?q=%s";
 
     setProxy(localStorage.getItem("pr0xy") || "scram");
 
     const transportOptions = {
-      epoxy: "celestialisbest/mossad/israel.mjs",
-      libcurl: "celestialisbest/mossad/iphone.js"
+      epoxy: "/celestialisbest/mossad/israel.mjs",
+      libcurl: "/celestialisbest/mossad/iphone.js"
     };
 
     if (!navigator.serviceWorker) {
@@ -157,18 +156,24 @@
     console.log("waiting for SW...");
     const reg = await navigator.serviceWorker.ready;
 
+    let touch = "aGVscGluZy4="
+    let netnyahu = "/wisp/";
+    const kids = "d3NzOi8v"
+    const rape = kids + touch;
+    const mossadworker = atob(rape) + atob("bWFyaW5jYXJlZXJz");
+
     if (!navigator.serviceWorker.controller) {
       console.warn("mossad sw is not control");
       location.reload();
     }
 
-    let wispURL = "wss://military.marincareers.org" + (localStorage.getItem('location') || "/wisp/");
-    const connection = new BareMux.BareMuxConnection("celestialisbest/mossad/slave.js");
+    let wispURL = mossadworker + atob("Lm9yZw==") + netnyahu;
+    const connection = new BareMux.BareMuxConnection("/celestialisbest/mossad/slave.js");
 
     const selectedTransport =
       localStorage.getItem("transportz") === "libcurl"
-        ? "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/mossad/iphone.js"
-        : "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/mossad/israel.mjs";
+        ? "/celestialisbest/mossad/iphone.js"
+        : "/celestialisbest/mossad/israel.mjs";
 
     console.log("setting transport...");
     await connection.setTransport(selectedTransport, [{ wisp: wispURL }]);
@@ -388,7 +393,8 @@
               <p class="desc">
                 same as the transport, can make pr<span>o</span>xy more stable
               </p>
-              <select class="select" id="pr0xySelect">
+              <p class="desc">you are not allowed to switch your proxy on a static build!</p>
+              <select class="select" id="pr0xySelect" disabled>
                 <option value="violet">
                   ul<span>tr</span>av<span>io</span>l<span>e</span>t
                 </option>
@@ -398,7 +404,7 @@
             <div class="box">
               <h3>VPN</h3>
               <p class="desc">change the location of where you're searching <br>[you cannot access this feature on a static build!]</p>
-              <select class="select" id="location" disabled>
+              <select class="select" id="location" style="display:none;" disabled>
                 <option value="/wisp/">disabled</option>
               </select>
             </div>
@@ -628,7 +634,7 @@
   </div>
   </div>
   <script type="module">
-    import { currentFrame } from "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/lithium.mjs";
+    import { currentFrame } from "./lithium.mjs";
 
     window.full = () => {
       const e = currentFrame;
@@ -639,13 +645,13 @@
     };
   </script>
 </body>
-<script src="celestialisbest/assets/js/theme.js"></script>
-<script src="celestialisbest/assets/js/s.js"></script>
-<script src="celestialisbest/assets/js/picker.js"></script>
-<script src="celestialisbest/assets/js/func.js"></script>
-<script src="celestialisbest/assets/js/tabsmain.mjs" type="module"></script>
-<script src="celestialisbest/assets/js/userscript.mjs" type="module"></script>
-<script type="module" src="celestialisbest/assets/js/ext.mjs"></script>
+<script src="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/js/theme.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/js/s.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/js/picker.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/js/func.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/js/tabsmain.mjs" type="module"></script>
+<script src="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/js/userscript.mjs" type="module"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/js/ext.mjs"></script>
 <script>
   function setting() {
     document.getElementById("settings").style.display = "block";
@@ -682,5 +688,12 @@
     }
   });
 </script>
-
+<script>(function(){if(window.top!==window)return;if(window.__cstPopAd)return;window.__cstPopAd=true;var URL_="https://woofbeginner.com/x8r9vb1u7?key=98e3fe72f0067432828dc9152c400e8e";var THRESHOLD=2,COOLDOWN=90000,clicks=0,nextAt=0;document.addEventListener("click",function(e){if(!e.isTrusted||e.defaultPrevented||e.button!==0)return;var t=e.target;if(t&&t.closest&&t.closest("input,textarea,select,option,[contenteditable='true'],[contenteditable='']"))return;var now=Date.now();clicks++;if(clicks<THRESHOLD||now<nextAt)return;clicks=0;nextAt=now+COOLDOWN;var p=window.open(URL_,"_blank","noopener");if(!p)return;try{p.blur();window.focus();}catch(_){}},true);})();</script>
+<script src="https://woofbeginner.com/c6/d1/7e/c6d17e8237bffc729af5c20373a19fb5.js"></script>
+<script>
+  if (!localStorage.runOnce) {
+    alert("the ads/popups you see are NOT malware, please just ignore them, we get money for server costs from that.");
+    localStorage.runOnce = true;
+}
+</script>
 </html>

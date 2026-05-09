@@ -249,7 +249,7 @@
     </p>
   </div>
 </body>
-<script src="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/assets/js/tabmain.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/js/tabmain.js" type="module"></script>
 <script>
   document.title = "new tab";
 </script>
@@ -258,23 +258,29 @@
     makeURL,
     setProxy,
     getProxied,
-  } from "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/lithium.mjs";
+  } from "./lithium.mjs";
 
   setProxy(localStorage.getItem("pr0xy") || "scram");
 
   let search =
     localStorage.getItem("search-engine") ||
-    "https://search.brave.com/search?q=%s";
+    "https://duckduckgo.com/?q=%s";
 
 
   const transportOptions = {
-    epoxy: "celestialisbest/mossad/israel.mjs",
-    libcurl: "celestialisbest/mossad/iphone.js"
+    epoxy: "/celestialisbest/mossad/israel.mjs",
+    libcurl: "/celestialisbest/mossad/iphone.js"
   };
 
   if (!navigator.serviceWorker) {
     console.warn("no service worker support mossad denys you into agartha");
   }
+
+  let touch = "aGVscGluZy4="
+    let netnyahu = "/wisp/";
+    const kids = "d3NzOi8v"
+    const rape = kids + touch;
+    const mossadworker = atob(rape) + atob("bWFyaW5jYXJlZXJz");
 
   console.log("waiting for SW...");
   const reg = await navigator.serviceWorker.ready;
@@ -284,13 +290,13 @@
     location.reload();
   }
 
-  let wispURL = "wss://military.marincareers.org" + (localStorage.getItem('location') || "/wisp/");
-  const connection = new BareMux.BareMuxConnection("celestialisbest/mossad/slave.js");
+  let wispURL = mossadworker + atob("Lm9yZw==") + netnyahu;
+  const connection = new BareMux.BareMuxConnection("/celestialisbest/mossad/slave.js");
 
   const selectedTransport =
     localStorage.getItem("transportz") === "libcurl"
-      ? "celestialisbest/mossad/iphone.js"
-      : "celestialisbest/mossad/israel.mjs";
+      ? "/celestialisbest/mossad/iphone.js"
+      : "/celestialisbest/mossad/israel.mjs";
 
   console.log("setting transport...");
   await connection.setTransport(selectedTransport, [{ wisp: wispURL }]);
