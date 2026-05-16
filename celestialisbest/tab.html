@@ -275,55 +275,85 @@
   <script>
     document.title = "new tab";
   </script>
-  <script defer type="module">
-    import {
-      setWisp,
-      makeURL,
-      setProxy,
-      getProxied,
-      setTransport,
-    } from "/lithium.mjs";
+<script defer type="module">
+  import {
+    makeURL,
+    setProxy,
+    getProxied,
+  } from "./lithium.mjs";
 
-    setWisp(
-      (location.protocol === "https:" ? "wss://" : "ws://") +
-        location.host +
-        (localStorage.getItem('location') || '/wisp/')
-    );
-    setProxy(localStorage.getItem("pr0xy") || "scram");
-    setTransport(localStorage.getItem("transportz") || "libcurl");
+  setProxy(localStorage.getItem("pr0xy") || "scram");
 
-    let search =
-      localStorage.getItem("search-engine") ||
-      "https://search.brave.com/search?q=%s";
+  let search =
+    localStorage.getItem("search-engine") ||
+    "https://duckduckgo.com/?q=%s";
 
-    async function autofill(url) {
-      const urlToLoad = makeURL(url, search);
-      const proxiedUrl = await getProxied(urlToLoad);
-      location.href = proxiedUrl;
-    }
 
-    try {
-      const params = new URLSearchParams(window.location.search);
-      const url = params.get("autofill");
-      if (url) autofill(url);
-    } catch {}
+  const transportOptions = {
+    epoxy: "/celestialisbest/mossad/israel.mjs",
+    libcurl: "/celestialisbest/mossad/iphone.js"
+  };
 
-    const form = document.getElementById("form");
-    const input = document.getElementById("address");
+  let touch = "aGVscGluZy4="
+  let netnyahu = "/wisp/";
+  const kids = "d3NzOi8v"
+  const rape = kids + touch;
+  const mossadworker = atob(rape) + atob("bWFyaW5jYXJlZXJz");
 
-    form?.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const proxiedUrl = await getProxied(makeURL(input.value, search));
-      location.href = proxiedUrl;
-    });
-  </script>
-  <script>
-    const params = new URLSearchParams(location.search);
-    const screen = document.querySelector(".params");
-    if (params.has("autofill")) {
-      screen.style.display = "block";
-    }
-  </script>
+  if (!navigator.serviceWorker) {
+    console.warn("no service worker support mossad denys you into agartha");
+  }
+
+  console.log("waiting for SW...");
+  const reg = await navigator.serviceWorker.ready;
+
+  if (!navigator.serviceWorker.controller) {
+    console.warn("mossad sw is not control");
+    location.reload();
+  }
+
+  let wispURL = mossadworker + atob("Lm9yZw==") + netnyahu;
+  const connection = new BareMux.BareMuxConnection("/celestialisbest/mossad/slave.js");
+
+  const selectedTransport =
+    localStorage.getItem("transportz") === "libcurl"
+      ? "/celestialisbest/mossad/iphone.js"
+      : "/celestialisbest/mossad/israel.mjs";
+
+  console.log("setting transport...");
+  await connection.setTransport(selectedTransport, [{ wisp: wispURL }]);
+
+  console.log("transport ready");
+
+
+  async function autofill(url) {
+    const urlToLoad = makeURL(url, search);
+    const proxiedUrl = await getProxied(urlToLoad);
+    location.href = proxiedUrl;
+  }
+
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const url = params.get("autofill");
+    if (url) autofill(url);
+  } catch { }
+
+  const form = document.getElementById("form");
+  const input = document.getElementById("address");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const proxiedUrl = await getProxied(makeURL(input.value, search));
+    location.href = proxiedUrl;
+  });
+</script>
+<script>
+  const params = new URLSearchParams(location.search);
+  const screen = document.querySelector(".params");
+  if (params.has("autofill")) {
+    screen.style.display = "block";
+  }
+</script>
   <script src="https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/js/theme.js"></script>
   <script>
     function showUpdLog() {
